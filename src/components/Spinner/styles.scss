@@ -1,0 +1,21 @@
+@import "src/styles/helpers/variables";
+@import "src/styles/helpers/animations";
+
+.ve-spinner {
+  .ve-spinner-svg {
+    height: 100%;
+    width: 100%;
+
+    animation: rotate 2s linear infinite;
+  }
+
+  .path {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: 0;
+    stroke-width: 2;
+    stroke: $c-primary;
+    stroke-linecap: round;
+
+    animation: loading-dash 1.5s ease-in-out infinite;
+  }
+}

@@ -1,0 +1,24 @@
+@import "src/styles/helpers/variables";
+
+.ve-header {
+  width: 100%;
+  background: $c-gray-lighter;
+  z-index: $z-header;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  &__container {
+    padding: $padding-sm;
+  }
+
+  /*
+  &__left,
+  &__center,
+  &__right {
+  }
+  */
+}

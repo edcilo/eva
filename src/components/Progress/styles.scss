@@ -1,0 +1,20 @@
+@import "src/styles/helpers/variables";
+
+.ve-progress {
+  &__progress {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    background-color: $c-gray-light;
+    border-radius: $br-rd-xs;
+  }
+
+  &__progress-bar {
+    height: 100%;
+    transition: all 0.5s ease;
+    background-color: $c-primary;
+    border-radius: $br-rd-xs 1px 1px $br-rd-xs;
+    color: $c-white;
+    text-align: center;
+  }
+}

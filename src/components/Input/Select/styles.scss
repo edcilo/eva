@@ -1,0 +1,47 @@
+@import "src/styles/helpers/variables";
+
+.ve-select {
+  display: inline-flex;
+  align-items: baseline;
+  position: relative;
+
+  &.block {
+    width: 100%;
+  }
+
+  &__combobox {
+    .ve-text__input {
+      cursor: default;
+
+      .disabled & {
+        cursor: default;
+      }
+    }
+  }
+
+  &__list {
+    width: 100%;
+
+    .ve-menu__trigger {
+      width: 100%;
+      cursor: default;
+    }
+
+    .ve-text__btn-clear {
+      cursor: pointer;
+
+      .disabled &,
+      .readonly & {
+        cursor: default;
+      }
+    }
+
+    .ve-menu__list {
+      margin-top: -1 * $margin-base;
+      width: 100%;
+      border-radius: 0 0 $br-sm $br-sm;
+    }
+  }
+
+  &.disabled {}
+}

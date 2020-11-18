@@ -1,0 +1,241 @@
+@import "src/styles/helpers/variables";
+
+$paddingY: $padding-sm;
+$paddingX: $padding-sm * 1.5;
+
+$iconPaddingX: $paddingX / 2;
+
+$bgColor: $c-white;
+$bgDisabled: $c-gray-lighter;
+
+$brRd: $br-rd-xs;
+$brColor: $c-gray-dark;
+$brDisabled: $c-gray-darker;
+
+$colorDark: $c-gray-darkest;
+$colorPh: $c-gray-dark;
+$colorDisabled: $c-gray-dark;
+$colorValueDisabled: $c-gray-darker;
+
+.ve-number {
+  display: inline-flex;
+  align-items: baseline;
+  margin: 0 0 $margin-base 0;
+  position: relative;
+
+  &.block {
+    width: 100%;
+  }
+
+  &__control {
+    display: inline-flex;
+    align-items: center;
+    background: $bgColor;
+    border-radius: $brRd;
+    border: 1px solid $brColor;
+    padding: $paddingY $paddingX;
+    width: 100%;
+
+    .selected &,
+    .primary & {
+      border-color: $c-primary;
+    }
+
+    .success & {
+      border-color: $c-success;
+    }
+
+    .info & {
+      border-color: $c-info;
+    }
+
+    .warning & {
+      border-color: $c-warning;
+    }
+
+    .danger &,
+    .error & {
+      border-color: $c-danger;
+    }
+
+    .disabled & {
+      background: $bgDisabled;
+      border-color: $brDisabled;
+    }
+  }
+
+  &__empty {
+    width: 0;
+  }
+
+  &__thumbnail,
+  &__right-thumbnail {
+    display: inline-flex;
+    align-items: center;
+    padding-right: $paddingX;
+    color: $colorDark;
+
+    .disabled & {
+      color: $colorDisabled;
+    }
+  }
+
+  &__right-thumbnail {
+    padding-right: 0;
+    padding-left: $paddingX;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: relative;
+  }
+
+  &__label {
+    font-size: $font-base;
+    line-height: 1;
+    background: $bgColor;
+    color: $colorPh;
+    box-shadow: 0 0 0 3px $bgColor;
+
+    position: absolute;
+    left: 0;
+
+    transform-origin: bottom left;
+    z-index: 1;
+    width: auto;
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .disabled & {
+      background: $bgDisabled;
+      box-shadow: 0 0 0 3px $bgDisabled;
+      color: $colorDisabled;
+    }
+  }
+
+  &__input:not([disabled]):focus ~ &__label,
+  &__input[badinput="true"] ~ &__label,
+  &__label.focused {
+    transform: scale(0.8) translateY(-175%);
+  }
+
+  &__input {
+    -webkit-appearance: textfield;
+    -moz-appearance:textfield; /* Firefox */
+    appearance: textfield;
+
+    background: $bgColor;
+    border-radius: $brRd;
+    border: none;
+    color: $colorDark;
+    font-size: $font-base;
+    outline: none;
+    text-align: right;
+    width: 100%;
+
+    &[disabled] {
+      color: $colorValueDisabled;
+      background: $bgDisabled;
+    }
+
+    &::placeholder {
+      color: $colorDark;
+      background: $bgDisabled;
+    }
+
+    &:-ms-input-placeholder,
+    &::-ms-input-placeholder {
+      color: $colorDark;
+      background: $bgDisabled;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      /* display: none; <- Crashes Chrome on hover */
+      -webkit-appearance: none;
+      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+  }
+
+  &__helper-text {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    font-size: $font-xs;
+
+    .success & {
+      color: $c-success;
+    }
+
+    .info & {
+      color: $c-info;
+    }
+
+    .warning & {
+      color: $c-warning;
+    }
+
+    .danger &,
+    .error & {
+      color: $c-danger;
+    }
+
+    .disabled & {
+      color: $colorDisabled;
+    }
+  }
+
+  &__btn-clear {
+    padding-left: $paddingX;
+    color: $colorDark;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+
+    .primary & {
+      color: darken($c-primary, 26%);
+    }
+
+    .success & {
+      color: darken($c-success, 20%);
+    }
+
+    .info & {
+      color: darken($c-info, 30%);
+    }
+
+    .warning & {
+      color: darken($c-warning, 20%);
+    }
+
+    .danger &,
+    .error & {
+      color: darken($c-danger, 20%);
+    }
+
+    .disabled & {
+      color: $colorPh;
+      cursor: default;
+    }
+
+    .readonly & {
+      cursor: default;
+    }
+  }
+
+  .ve-button {
+    margin: 0;
+    padding: 4px;
+
+    &.minus {
+      margin-right: $paddingX;
+    }
+
+    &.add {
+      margin-left: $paddingX;
+    }
+  }
+}

@@ -1,0 +1,220 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes progressive-reveal {
+0% { transform: scale(1.05); opacity: 0; }
+100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes loading-dash {
+  0% {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+  }
+
+  50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -40px;
+  }
+
+  100% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -120px;
+  }
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+      transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+      transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+      opacity: 1;
+      transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+      transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceOut {
+  20% {
+      transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  50%,
+  55% {
+      opacity: 1;
+      transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  to {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+
+  to {
+      opacity: 0;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+      transform: translate3d(0, 100%, 0);
+      visibility: visible;
+  }
+
+  to {
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+  }
+
+  to {
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+      transform: translate3d(0, -100%, 0);
+      visibility: visible;
+  }
+
+  to {
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+  }
+
+  to {
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideOutUp {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    display: none;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+      transform: translate3d(0, 0, 0);
+  }
+
+  to {
+      visibility: hidden;
+      transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+      opacity: 1;
+  }
+}
+
+@keyframes zoomOut {
+  from {
+      opacity: 1;
+  }
+
+  50% {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+      opacity: 0;
+  }
+}

@@ -1,0 +1,56 @@
+@import "src/styles/helpers/variables";
+
+$avatar-width: 40px;
+$avatar-height: 40px;
+$colors: $c-red, $c-orange, $c-yellow, $c-green, $c-teal, $c-blue, $c-indigo, $c-purple, $c-pink, $c-cyan;
+
+.ve-avatar {
+  width: $avatar-width;
+  height: $avatar-height;
+
+  display: inline-block;
+
+  text-align: center;
+  vertical-align: middle;
+  background: $c-gray-light;
+  border-radius: 50%;
+  overflow: hidden;
+
+  &.tile {
+    .ve-avatar__image,
+    .ve-avatar__label,
+    .ve-avatar__placeholder,
+    .ve-avatar__placeholder img {
+      border-radius: 0;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  &__label,
+  &__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  &__label {
+    color: $text-dark;
+  }
+
+  &__placeholder {
+    font-weight: $fw-medium;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

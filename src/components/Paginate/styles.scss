@@ -1,0 +1,19 @@
+@import "src/styles/helpers/variables";
+
+.ve-paginate {
+  display: flex;
+  flex-direction: row;
+
+  &__btn {
+    margin: $margin-xs;
+    padding: $padding-sm $padding-base;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

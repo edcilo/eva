@@ -1,0 +1,22 @@
+.text-transparent {
+  color: transparent !important;
+}
+
+.text-primary {
+  color: $c-primary !important;
+}
+
+.text-secondary {
+  color: $c-secondary !important;
+}
+
+@include tc-color($gray);
+@include tc-color($red);
+@include tc-color($orange);
+@include tc-color($yellow);
+@include tc-color($green);
+@include tc-color($teal);
+@include tc-color($blue);
+@include tc-color($indigo);
+@include tc-color($purple);
+@include tc-color($pink);

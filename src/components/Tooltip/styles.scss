@@ -1,0 +1,47 @@
+@import "src/styles/helpers/variables";
+
+.ve-tooltip {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+
+  &__popover {
+    position: absolute;
+    cursor: default;
+    white-space: nowrap;
+    padding: $padding-xs $padding-base;
+    border-radius: $br-rd-sm;
+    display: none;
+    background: $c-gray-darker;
+    color: $c-white;
+    font-size: $font-xs;
+    font-weight: 500;
+    z-index: $z-tooltip;
+
+    &.open {
+      display: block;
+    }
+
+    &-top {
+      bottom: 100%;
+      margin-bottom: $margin-sm;
+    }
+
+    &-right {
+      left: 100%;
+      margin-left: $margin-sm;
+    }
+
+    &-bottom {
+      top: 100%;
+      margin-top: $margin-sm;
+    }
+
+    &-left {
+      right: 100%;
+      margin-right: $margin-sm;
+    }
+  }
+
+  &__arrow {}
+}

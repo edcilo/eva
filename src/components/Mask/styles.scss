@@ -1,0 +1,32 @@
+@import "src/styles/helpers/variables";
+
+.ve-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: $z-mask;
+
+  .ve-mask__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $c-black;
+
+    transition: opacity $trans-speed ease-in-out;
+  }
+
+  .ve-mask__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

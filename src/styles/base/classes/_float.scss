@@ -1,0 +1,19 @@
+.float-right {
+  float: right !important;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.float-none {
+  float: none !important;
+}
+
+.clearfix {
+  &::after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+}

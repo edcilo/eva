@@ -1,0 +1,65 @@
+@import "src/styles/helpers/variables";
+
+.ve-item {
+  display: flex;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__visual {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+
+    .ve-icon,
+    .icon {
+      margin: 1rem;
+      font-size: 1.285rem;
+    }
+
+    .ve-avatar {
+      margin: 0.75rem 0 0.75rem 1rem;
+
+      &.tile {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+    }
+
+    .ve-image {
+      margin: 0.5rem 0;
+      width: 6.25rem; // 100px * 56px
+      // height: 3.5rem;
+    }
+  }
+
+  &__body {
+    margin: 0.75rem 1rem;
+    width: 100%;
+  }
+
+  &__overline {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: $font-xs;
+  }
+
+  &__secondary {
+    display: block;
+    color: $c-gray-darker;
+    font-size: $font-sm;
+    font-weight: $fw-light;
+  }
+
+  &__control {
+    margin: 1rem;
+    white-space: nowrap;
+    margin: 0.75rem 1rem 0.75rem 0;
+    color: $c-gray-darker;
+  }
+}

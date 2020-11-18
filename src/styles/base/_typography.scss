@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Lora:400,700|Love+Ya+Like+A+Sister|Open+Sans:300,400,600,700|Rubik:300,400,500,700&display=swap');
+
+@import "./../base/typography/color";
+@import "./../base/typography/fontFamily";
+@import "./../base/typography/sizing";
+@import "./../base/typography/weight";
+@import "./../base/typography/letterSpacing";
+@import "./../base/typography/lineHeight";
+@import "./../base/typography/lists";
+@import "./../base/typography/style";
+@import "./../base/typography/alignment";
+@import "./../base/typography/verticalAlign";
+
+h1,
+.fs-h1 {
+    @include font-scale($fs-h1, $fw-medium);
+    font-family: $font-sans-2;
+}
+
+h2,
+.fs-h2 {
+    @include font-scale($fs-h2, $fw-base);
+    font-family: $font-sans-2;
+}
+
+h3,
+.fs-h3 {
+    @include font-scale($fs-h3, $fw-base);
+    font-family: $font-sans-2;
+}
+
+h4,
+.fs-h4 {
+    @include font-scale($fs-h4, $fw-base);
+    font-family: $font-sans-2;
+}
+
+h5,
+.fs-h5 {
+    @include font-scale($fs-h5, $fw-base);
+    font-family: $font-sans-2;
+}
+
+h6,
+.fs-h6 {
+    @include font-scale($fs-h6, $fw-base);
+    font-family: $font-sans-2;
+}
+
+.fs-st1 {
+    @include font-scale($fs-st1, $fw-base);
+}
+
+.fs-st2 {
+    @include font-scale($fs-st2, $fw-medium);
+}
+
+.fs-b1 {
+    @include font-scale($fs-b1, $fw-base);
+}
+
+.fs-b2 {
+    @include font-scale($fs-b2, $fw-base);
+}
+
+.fs-btn {
+    @include font-scale($fs-btn, $fw-medium);
+
+    text-transform: uppercase;
+}
+
+.fs-cap {
+    @include font-scale($fs-cap, $fw-base);
+}
+
+.fs-ol {
+    @include font-scale($fs-ol, $fw-base);
+
+    text-transform: uppercase;
+}
+
+.fs-lg {
+    @include font-scale($fs-lg, $fw-base);
+}
+
+.fs-regular {
+    @include font-scale($fs-base, $fw-base);
+}
+
+.fs-sm {
+    @include font-scale($fs-sm, $fw-base);
+}
+
+.fs-micro {
+    @include font-scale($fs-xs, $fw-base);
+    text-transform: uppercase;
+}

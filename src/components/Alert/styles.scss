@@ -1,0 +1,76 @@
+@import "src/styles/helpers/variables";
+@import "src/styles/helpers/animations";
+
+.fade-enter-active {
+  animation: fadeIn 0.25s;
+}
+.fade-leave-active {
+  animation: fadeOut 0.5s;
+}
+
+.ve-alert {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: $padding-base;
+  margin-bottom: $margin-base;
+  border: 1px solid transparent;
+  border-radius: $br-rd-xs;
+
+  &.alert-primary {
+    color: $c-blue-dark;
+    background-color: $c-blue-lighter;
+    border-color: $c-blue-lighter;
+  }
+
+  &.alert-success {
+    color: $c-green-darker;
+    background-color: $c-green-lighter;
+    border-color: $c-green-lighter;
+  }
+
+  &.alert-warning {
+    color: $c-yellow-darker;
+    background-color: $c-yellow-lighter;
+    border-color: $c-yellow-lighter;
+  }
+
+  &.alert-danger {
+    color: $c-red-darker;
+    background-color: $c-red-lighter;
+    border-color: $c-red-lighter;
+  }
+
+  &.alert-info {
+    color: $c-black;
+    background-color: $c-gray-lighter;
+    border-color: $c-gray-lighter;
+  }
+
+  &.alert-dark {
+    color: $c-white;
+    background: $c-gray-darker;
+    border-color: $c-gray-darker;
+  }
+
+  &__container {
+  }
+
+  &__btn-container {
+  }
+
+  .btn-close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    color: inherit;
+    font-size: $font-base;
+    font-weight: $fw-bold;
+    line-height: 1;
+    text-shadow: 0 1px 0 #fff;
+
+    &:not(:disabled) {
+      cursor: pointer;
+    }
+  }
+}

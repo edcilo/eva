@@ -1,0 +1,15 @@
+@import "src/styles/helpers/variables";
+
+.ve-panel {
+  position: relative;
+  // z-index: $z-regular;
+
+  background: $c-white;
+  box-shadow: $panel-shadow;
+  border-radius: $br-sm;
+
+  width: 100%;
+  height: auto;
+
+  transition: width $trans-speed ease-in-out, height $trans-speed ease-in-out;
+}

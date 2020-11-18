@@ -1,0 +1,154 @@
+@import "./mixins/breakpoints";
+@import "./mixins/grid";
+@import "./mixins/grid-framework";
+
+@mixin font-size($sizeValue: $fs-root) {
+    font-size: $sizeValue + px;
+    font-size: ($sizeValue / $fs-root) + rem;
+}
+
+@mixin font-scale($fs, $fw) {
+    @include font-size($fs);
+
+    font-weight: $fw;
+    letter-spacing: ($tfs / $fs) + rem;
+}
+
+/*
+* Make list of background color classes
+*/
+@mixin bg-color($colors) {
+    @each $name, $color in $colors {
+        .bg-#{$name} {
+            background-color: $color !important;
+        }
+    }
+}
+
+/*
+* Make list of text color classes
+*/
+@mixin tc-color($colors) {
+    @each $name, $color in $colors {
+        .text-#{$name} {
+            color: $color !important;
+        }
+    }
+}
+
+/*
+* Make list of border color classes
+*/
+@mixin border-color($colors) {
+    @each $name, $color in $colors {
+        .border-#{$name} {
+            border-color: $color !important;
+        }
+    }
+}
+
+/*
+* @include triangle within a pseudo element and add positioning properties (ie. top, left)
+* $direction: up, down, left, right
+*/
+@mixin triangle($direction, $size: 6px, $color: #222) {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0; width: 0;
+
+    @if ($direction == 'up') {
+        border-bottom: $size solid $color;
+        border-left: 1/2*$size solid transparent;
+        border-right: 1/2*$size solid transparent;
+    }
+    @else if ($direction == 'down') {
+        border-top: $size solid $color;
+        border-left: 1/2*$size solid transparent;
+        border-right: 1/2*$size solid transparent;
+    }
+    @else if ($direction == 'left') {
+        border-top: 1/2*$size solid transparent;
+        border-bottom: 1/2*$size solid transparent;
+        border-right: $size solid $color;
+    }
+    @else if ($direction == 'right') {
+        border-top: 1/2*$size solid transparent;
+        border-bottom: 1/2*$size solid transparent;
+        border-left: $size solid $color;
+    }
+}
+
+/*
+ * @include Truncate Text, A simple method for ensuring that your text element doesn’t overflow its container and breaks nicely
+ * $overflow: clip, ellipsis, or a string
+ */
+@mixin truncateText($overflow: ellipsis) {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: $overflow;
+}
+
+@mixin btnStyle($color, $background, $border, $focus) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+
+    &:hover, &.hover {
+        color: $color;
+        background-color: darken($background, 10);
+        border-color: darken($border, 15);
+    }
+
+    &:active, &.active {
+        color: $color;
+        background-color: darken($background, 15);
+        border-color: darken($border, 20);
+    }
+
+    &:focus, &.focus {
+        box-shadow: $focus;
+    }
+
+    &:disabled, &.disabled {
+        color: $color;
+        background-color: $background;
+        border-color: $border;
+    }
+}
+
+/*
+ * Hover
+ */
+@mixin hover {
+    &:hover { @content; }
+}
+
+@mixin hover-focus {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+@mixin plain-hover-focus {
+    &,
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+@mixin hover-focus-active {
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+    }
+}
+
+// https://github.com/twbs/bootstrap/blob/v4-dev/scss/mixins/_breakpoints.scss
+@function breakpoint-min($name, $breakpoints) {
+    $min: map-get($breakpoints, $name);
+    @return if($min != 0, $min, null);
+}

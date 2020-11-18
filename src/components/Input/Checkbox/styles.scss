@@ -1,0 +1,40 @@
+@import "src/styles/helpers/variables";
+
+.ve-checkbox {
+  display: inline-flex;
+  align-items: center;
+  height: auto;
+  outline: none;
+  margin: 0 $margin-xs 0 0;
+
+  &__control {
+    position: relative;
+    margin-right: $margin-xs;
+    color: inherit;
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    .disabled & {
+      cursor: default;
+    }
+  }
+
+  &__icon {
+    color: $c-primary;
+    font-size: $font-lg;
+
+    .disabled & {
+      color: $c-gray-dark;
+    }
+  }
+
+  &__label {
+    display: inline;
+  }
+}

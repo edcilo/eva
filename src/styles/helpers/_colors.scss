@@ -1,0 +1,207 @@
+/*--- COLORS ---*/
+
+// grayscale
+$c-white:           #FFFFFF;
+$c-gray-lightest:   #F8FAFC;
+$c-gray-lighter:    #F1F5F8;
+$c-gray-light:      #DAE1E7;
+$c-gray-base:       #B8C2CC;
+$c-gray-dark:       #8795A1;
+$c-gray-darker:     #606F7B;
+$c-gray-darkest:    #3D4852;
+$c-black:           #22292F;
+
+$gray:               (
+    white:           $c-white,
+    gray-lightest:   $c-gray-lightest,
+    gray-lighter:    $c-gray-lighter,
+    gray-light:      $c-gray-light,
+    gray-base:       $c-gray-base,
+    gray-dark:       $c-gray-dark,
+    gray-darker:     $c-gray-darker,
+    gray-darkest:    $c-gray-darkest,
+    black:           $c-black
+);
+
+// colors
+$c-red-lightest:    #FCEBEA;
+$c-red-lighter:     #F9ACAA;
+$c-red-light:       #EF5753;
+$c-red-base:        #E3342F;
+$c-red-dark:        #CC1F1A;
+$c-red-darker:      #621B18;
+$c-red-darkest:     #3B0D0C;
+$c-red:             $c-red-base;
+
+$red:                (
+    red:             $c-red,
+    red-lightest:    $c-red-lightest,
+    red-lighter:     $c-red-lighter,
+    red-light:       $c-red-light,
+    red-base:        $c-red-base,
+    red-dark:        $c-red-dark,
+    red-darker:      $c-red-darker,
+    red-darkest:     $c-red-darkest,
+);
+
+$c-orange-lightest: #FFF5EB;
+$c-orange-lighter:  #FCD9B6;
+$c-orange-light:    #FAAD63;
+$c-orange-base:     #F6993F;
+$c-orange-dark:     #DE751F;
+$c-orange-darker:   #613B1F;
+$c-orange-darkest:  #462A16;
+$c-orange:          $c-orange-base;
+
+$orange:             (
+    orange:          $c-orange,
+    orange-lightest: $c-orange-lightest,
+    orange-lighter:  $c-orange-lighter,
+    orange-light:    $c-orange-light,
+    orange-base:     $c-orange-base,
+    orange-dark:     $c-orange-dark,
+    orange-darker:   $c-orange-darker,
+    orange-darkest:  $c-orange-darkest,
+);
+
+$c-yellow-lightest: #FCFBEB;
+$c-yellow-lighter:  #FFF9C2;
+$c-yellow-light:    #FFF382;
+$c-yellow-base:     #FFED4A;
+$c-yellow-dark:     #F2D024;
+$c-yellow-darker:   #684F1D;
+$c-yellow-darkest:  #453411;
+$c-yellow:          $c-yellow-base;
+
+$yellow:             (
+    yellow:          $c-yellow,
+    yellow-lightest: $c-yellow-lightest,
+    yellow-lighter:  $c-yellow-lighter,
+    yellow-light:    $c-yellow-light,
+    yellow-base:     $c-yellow-base,
+    yellow-dark:     $c-yellow-dark,
+    yellow-darker:   $c-yellow-darker,
+    yellow-darkest:  $c-yellow-darkest,
+);
+
+$c-green-lightest:  #E3FCEC;
+$c-green-lighter:   #A2F5BF;
+$c-green-light:     #51D88A;
+$c-green-base:      #38C172;
+$c-green-dark:      #1F9D55;
+$c-green-darker:    #1A4731;
+$c-green-darkest:   #0F2F21;
+$c-green:           $c-green-base;
+
+$green:              (
+    green:           $c-green,
+    green-lightest:  $c-green-lightest,
+    green-lighter:   $c-green-lighter,
+    green-light:     $c-green-light,
+    green-base:      $c-green-base,
+    green-dark:      $c-green-dark,
+    green-darker:    $c-green-darker,
+    green-darkest:   $c-green-darkest,
+);
+
+$c-teal-lightest:   #E8FFFE;
+$c-teal-lighter:    #A0F0ED;
+$c-teal-light:      #64D5CA;
+$c-teal-base:       #4DC0B5;
+$c-teal-dark:       #38A89D;
+$c-teal-darker:     #20504F;
+$c-teal-darkest:    #0D3331;
+$c-teal:            $c-teal-base;
+
+$teal:               (
+    teal:            $c-teal,
+    teal-lightest:   $c-teal-lightest,
+    teal-lighter:    $c-teal-lighter,
+    teal-light:      $c-teal-light,
+    teal-base:       $c-teal-base,
+    teal-dark:       $c-teal-dark,
+    teal-darker:     $c-teal-darker,
+    teal-darkest:    $c-teal-darkest,
+);
+
+$c-blue-lightest:   #EFF8FF;
+$c-blue-lighter:    #BCDEFA;
+$c-blue-light:      #6CB2EB;
+$c-blue-base:       #3490DC;
+$c-blue-dark:       #2779BD;
+$c-blue-darker:     #1C3D5A;
+$c-blue-darkest:    #12283A;
+$c-blue:            $c-blue-base;
+
+$blue:               (
+    blue:            $c-blue,
+    blue-lightest:   $c-blue-lightest,
+    blue-lighter:    $c-blue-lighter,
+    blue-light:      $c-blue-light,
+    blue-base:       $c-blue-base,
+    blue-dark:       $c-blue-dark,
+    blue-darker:     $c-blue-darker,
+    blue-darkest:    $c-blue-darkest,
+);
+
+$c-indigo-lightest: #E6E8FF;
+$c-indigo-lighter:  #B2B7FF;
+$c-indigo-light:    #7886D7;
+$c-indigo-base:     #6574CD;
+$c-indigo-dark:     #5661B3;
+$c-indigo-darker:   #2F365F;
+$c-indigo-darkest:  #191E38;
+$c-indigo:          $c-indigo-base;
+
+$indigo:             (
+    indigo:          $c-indigo,
+    indigo-lightest: $c-indigo-lightest,
+    indigo-lighter:  $c-indigo-lighter,
+    indigo-light:    $c-indigo-light,
+    indigo-base:     $c-indigo-base,
+    indigo-dark:     $c-indigo-dark,
+    indigo-darker:   $c-indigo-darker,
+    indigo-darkest:  $c-indigo-darkest,
+);
+
+$c-purple-lightest: #F3EBFF;
+$c-purple-lighter:  #D6BBFC;
+$c-purple-light:    #A779E9;
+$c-purple-base:     #9561E2;
+$c-purple-dark:     #794ACF;
+$c-purple-darker:   #382B5F;
+$c-purple-darkest:  #21183C;
+$c-purple:          $c-purple-base;
+
+$purple:             (
+    purple:          $c-purple,
+    purple-lightest: $c-purple-lightest,
+    purple-lighter:  $c-purple-lighter,
+    purple-light:    $c-purple-light,
+    purple-base:     $c-purple-base,
+    purple-dark:     $c-purple-dark,
+    purple-darker:   $c-purple-darker,
+    purple-darkest:  $c-purple-darkest,
+);
+
+$c-pink-lightest:   #FFEBEF;
+$c-pink-lighter:    #FFBBCA;
+$c-pink-light:      #FA7EA8;
+$c-pink-base:       #F66D9B;
+$c-pink-dark:       #EB5286;
+$c-pink-darker:     #6F213F;
+$c-pink-darkest:    #451225;
+$c-pink:            $c-pink-base;
+
+$pink:               (
+    pink:            $c-pink,
+    pink-lightest:   $c-pink-lightest,
+    pink-lighter:    $c-pink-lighter,
+    pink-light:      $c-pink-light,
+    pink-base:       $c-pink-base,
+    pink-dark:       $c-pink-dark,
+    pink-darker:     $c-pink-darker,
+    pink-darkest:    $c-pink-darkest,
+);
+
+$c-cyan:            #17a2b8;

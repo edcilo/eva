@@ -1,0 +1,14 @@
+@import "src/styles/helpers/variables";
+
+.ve-loading {
+  &__spinner {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__content {
+    margin-top: $margin-base;
+    color: $text-light;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,84 @@
+@import "src/styles/helpers/variables";
+@import "src/styles/helpers/animations";
+
+.zoom-enter-active {
+  animation: zoomIn 0.25s;
+}
+.zoom-leave-active {
+  animation: zoomOut 0.5s;
+}
+
+.ve-snackbar__container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: $z-snicker;
+
+  &.top {
+    top: 0;
+    bottom: auto;
+  }
+
+  &.left {
+    justify-content: flex-start;
+  }
+
+  &.right {
+    justify-content: flex-end;
+  }
+}
+
+.ve-snackbar {
+  width: 100%;
+  max-width: 420px;
+  margin: $margin-base;
+
+  .ve-panel {
+    background: $c-black;
+    border-radius: $br-rd-sm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &.vertical {
+    flex-direction: column;
+  }
+
+  &__content {
+    padding: 14px 0 16px 14px;
+    font-size: $font-sm;
+    color: $c-white;
+
+    .vertical & {
+      width: 100%;
+      padding-right: 16px;
+    }
+  }
+
+  &__btn {
+    padding: 6px 8px;
+
+    .vertical & {
+      width: 100%;
+      padding: 2px 8px 8px;
+      text-align: right;
+    }
+
+    button,
+    .ve-button {
+      margin: 0;
+      text-transform: uppercase;
+      color: $c-purple-light;
+      font-weight: $fw-medium;
+
+      &:hover {
+        color: $c-purple-light;
+        background: transparent;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import "src/styles/helpers/variables";
+@import "src/styles/helpers/mixins";
+
+.ve-container {
+  @include make-container();
+  @include make-container-max-widths();
+}
+
+.ve-container-fluid {
+  @include make-container();
+}

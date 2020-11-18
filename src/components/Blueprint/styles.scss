@@ -1,0 +1,13 @@
+@import "src/styles/helpers/variables";
+
+.ve-blueprint {
+  position: relative;
+  padding: $padding-base;
+  min-height: 240px;
+
+  background: $c-blue-base url("./pattern.png");
+
+  &.overflow-hidden {
+    overflow: hidden;
+  }
+}

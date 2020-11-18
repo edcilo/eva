@@ -1,0 +1,206 @@
+@import "../helpers/colors";
+
+/*--- Color ---*/
+$c-primary  : #2AAC8D;
+$c-secondary: #2E5A8C;
+$c-info     : $c-blue-light;
+$c-success  : $c-green;
+$c-warning  : $c-yellow-dark;
+$c-danger   : $c-red;
+$c-light    : $c-gray-light;
+$c-dark     : $c-black;
+
+/*--- Typography ---*/
+$font-sans              : 'Open Sans', Helvetica, Arial, sans-serif;
+$font-sans-2            : 'Rubik', Helvetica, Arial, sans-serif;
+$font-family-serif      : 'Lora', serif;
+$font-family-monospace  : 'Anonymous Pro', monospace;
+$font-family-cursive    : 'Love Ya Like A Sister', cursive;
+$font-family-base       : $font-sans;
+
+$line-height-none : 1;
+$line-height-tight: 1.25;
+$line-height-base : 1.5;
+$line-height-loose: 2;
+
+$text-base     : $c-black;
+$text-primary  : $c-primary;
+$text-secondary: $c-secondary;
+$text-info     : $c-info;
+$text-success  : $c-success;
+$text-warning  : $c-warning;
+$text-danger   : $c-danger;
+$text-light    : $c-light;
+$text-dark     : $c-black;
+$text-muted    : $c-gray-dark;
+
+// root font size
+$fs-root: 16;
+$fs-xs  : 12;
+$fs-sm  : 14;
+$fs-base: 16;
+$fs-lg  : 18;
+$fs-xl  : 20;
+$fs-2xl : 24;
+$fs-3xl : 32;
+$fs-4xl : 40;
+$fs-5xl : 48;
+
+// font size ratio
+$fs-ratio: 0.0625;
+
+// font size
+$font-xs  : 0.75rem;
+$font-sm  : 0.875rem;
+$font-base: 1rem;
+$font-lg  : 1.125rem;
+$font-xl  : 1.25rem;
+$font-2xl : 1.5rem;
+$font-3xl : 2rem;
+$font-4xl : 2.5rem;
+$font-5xl : 3rem;
+
+// font weight
+$fw-hairline : 100;
+$fw-thin     : 200;
+$fw-light    : 300;
+$fw-base     : 400;
+$fw-medium   : 500;
+$fw-semibold : 600;
+$fw-bold     : 700;
+$fw-extrabold: 800;
+$fw-black    : 900;
+
+// icon sizes
+$icon-sm    : 0.875rem;
+$icon-base  : 1rem;
+$icon-lg    : 1.5rem;
+$icon-xl    : 2rem;
+
+// headlines
+$fs-h1: $fs-root * 3;
+$fs-h2: $fs-root * 2.5;
+$fs-h3: $fs-root * 2.25;
+$fs-h4: $fs-root * 2;
+$fs-h5: $fs-root * 1.5;
+$fs-h6: $fs-root * 1.25;
+
+// Gutter
+$gutter-width: 1rem;
+
+// Margin
+$margin-xs  : 0.25rem;
+$margin-sm  : 0.5rem;
+$margin-base: 1rem;
+$margin-lg  : 2rem;
+$margin-xl  : 3rem;
+$margin-2xl : 3.7rem;
+
+// Padding
+$padding-xs  : 0.25rem;
+$padding-sm  : 0.5rem;
+$padding-base: 1rem;
+$padding-lg  : 2rem;
+$padding-xl  : 3rem;
+$padding-2xl : 3.7rem;
+
+// subtitles
+$fs-st1: 16;
+$fs-st2: 14;
+
+$fs-b1: 16;
+$fs-b2: 14;
+
+$fs-btn: 14;
+$fs-cap: 12;
+$fs-ol : 10;
+
+// link
+$link-color           : $c-primary;
+$link-decoration      : none;
+$link-hover-color     : darken($link-color, 15%);
+$link-hover-decoration: underline;
+
+// heading
+$heading-margin-bottom: 1rem;
+
+// p
+$paragraph-margin-bottom: 1rem;
+
+// tracking from sketch
+$tfs: 0.2;
+
+$dt-font-weight: $fw-bold;
+
+/*--- Body ---*/
+$body-bg   : $c-white;
+$body-color: $text-base;
+
+/*--- Grid ---*/
+$grid-columns: 12;
+$grid-gutter-width: $padding-base;
+$grid-breakpoint-xs: 0;
+$grid-breakpoint-sm: 576px;
+$grid-breakpoint-md: 768px;
+$grid-breakpoint-lg: 992px;
+$grid-breakpoint-xl: 1200px;
+$grid-breakpoint-xxl: 1722px;
+$grid-breakpoints:        (
+    xs: $grid-breakpoint-xs,
+    sm: $grid-breakpoint-sm,
+    md: $grid-breakpoint-md,
+    lg: $grid-breakpoint-lg,
+    xl: $grid-breakpoint-xl,
+    xxl: $grid-breakpoint-xxl,
+);
+
+/*--- Containers ---*/
+$container-max-widths:    (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1722px
+);
+
+/*--- BORDER ---*/
+$br-xs: 1px;
+$br-sm: 2px;
+$br-base: 4px;
+$br-lg: 6px;
+
+$br-rd-xs  : 2px;
+$br-rd-sm  : 4px;
+$br-rd-base: 8px;
+
+/*--- Shadow ---*/
+$box-shadow-sm: 0 .125rem .25rem rgba($c-black, .075);
+$box-shadow   : 0 2px 4px 0 rgba($c-black, .10);
+$box-shadow-md: 0 4px 8px 0 rgba($c-black, .12),   0 2px 4px 0 rgba($c-black, .08);
+$box-shadow-lg: 0 15px 30px 0 rgba($c-black, .11), 0 5px 15px 0 rgba($c-black, .08);
+$box-shadow-top: -4px 0 8px 0 rgba($c-black, .12),  -2px 0 4px 0 rgba($c-black, .08);
+
+$panel-shadow      : 0 1px 2px rgba($c-black, 0.1), 0 0 1px rgba($c-black, 0.1);
+$box-shadow-outline: 0 0 0 3px rgba($c-primary, .6);
+$box-shadow-inner  : inset 0 2px 4px 0 rgba($c-black, .06);
+
+/*--- TRANSITIONS ---*/
+$trans-speed: 300ms;
+
+/*--- TABLES ---*/
+$table-cell-padding   : .75rem;
+$table-cell-padding-sm: .3rem;
+$table-caption-color  : $text-muted;
+
+/*--- FORM ---*/
+$label-margin-bottom: .5rem;
+
+/*---Z-INDEX ---*/
+$z-regular   : 0;
+$z-contextual: 500;
+$z-sheets    : 600;
+$z-header    : 700;
+$z-tooltip   : 750;
+$z-mask      : 800;
+$z-drawer    : 900;
+$z-snicker   : 950;

@@ -1,0 +1,14 @@
+@import "node_modules/prismjs/themes/prism";
+@import "src/styles/helpers/variables";
+
+.ve-code {
+  &[class*="language-"] {
+    margin: 0;
+    border-radius: $br-rd-xs;
+  }
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}

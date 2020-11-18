@@ -1,0 +1,14 @@
+.border-transparent {
+  border-color: transparent !important;
+}
+
+@include border-color($gray);
+@include border-color($red);
+@include border-color($orange);
+@include border-color($yellow);
+@include border-color($green);
+@include border-color($teal);
+@include border-color($blue);
+@include border-color($indigo);
+@include border-color($purple);
+@include border-color($pink);

@@ -1,0 +1,33 @@
+.whitespace-normal {
+  white-space: normal !important;
+}
+
+.whitespace-no-wrap {
+  white-space: nowrap !important;
+}
+
+.whitespace-pre {
+  white-space: pre !important;
+}
+
+.whitespace-pre-line {
+  white-space: pre-line !important;
+}
+
+.whitespace-pre-wrap {
+  white-space: pre-wrap !important;
+}
+
+.break-words {
+  word-wrap: break-word !important;
+}
+
+.break-normal {
+  word-wrap: normal !important;
+}
+
+.truncate {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}

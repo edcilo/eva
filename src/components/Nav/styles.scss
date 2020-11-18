@@ -1,0 +1,41 @@
+@import "src/styles/helpers/variables";
+
+.ve-nav {
+  display: flex;
+
+  .ve-item, .ve-panel {
+    box-shadow: none;
+    border-right: 1px solid $c-gray-lighter;
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+
+    &:first-child {
+      border-radius: $br-sm 0 0 $br-sm;
+    }
+
+    &:last-child {
+      border: none;
+      border-radius: 0 $br-sm $br-sm 0;
+    }
+  }
+
+  &.vertical {
+    flex-direction: column;
+
+    .ve-item, .ve-panel {
+      border: none;
+      border-bottom: 1px solid $c-gray-lighter;
+
+      &:first-child {
+        border-radius: $br-sm $br-sm 0 0;
+      }
+
+      &:last-child {
+        border: none;
+        border-radius: 0 0 $br-sm $br-sm;
+      }
+    }
+  }
+}

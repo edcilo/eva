@@ -1,0 +1,79 @@
+@import "src/styles/helpers/variables";
+@import "src/styles/helpers/animations";
+
+.fade-enter-active {
+  animation: fadeIn 0.25s;
+}
+
+.fade-leave-active {
+  animation: fadeOut 0.125s;
+}
+
+.ve-menu {
+  display: inline-flex;
+  position: relative;
+  flex-direction: column;
+
+  &__trigger {
+    display: inline-block;
+  }
+
+  &__list {
+    background: $c-white;
+    border-radius: $br-sm;
+    box-shadow: $box-shadow-md;
+    padding: $padding-xs 0;
+    min-width: 150px;
+    top: 100%;
+    z-index: $z-contextual;
+
+    &-absolute {
+      position: absolute;
+    }
+
+    &-fixed {
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+
+    &-end {
+      right: 0;
+    }
+
+    &-left {
+      top: 0;
+      right: 100%;
+    }
+
+    &-right {
+      top: 0;
+      left: 100%;
+    }
+
+    &-top {
+      top: auto;
+      bottom: 100%;
+    }
+
+    &-bottom {
+      top: 100%;
+      bottom: auto;
+    }
+
+    .ve-item {
+      border-bottom: 1px solid $c-gray-lighter;
+      border-radius: 0;
+      box-shadow: none;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $c-gray-lighter;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

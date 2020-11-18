@@ -1,0 +1,43 @@
+@import "src/styles/helpers/variables";
+@import "src/styles/helpers/animations";
+
+.slide-enter-active {
+  animation: slideInDown 0.25s;
+}
+
+.slide-leave-active {
+  animation: slideOutUp 0.25s;
+}
+
+.ve-banner {
+  background: $c-white;
+  border: 1px solid $c-gray-light;
+  border-top: none;
+
+  &__container {
+    display: flex;
+    padding: $padding-base;
+  }
+
+  &__icon {
+    min-width: 56px;
+    width: 56px;
+    box-sizing: border-box;
+    padding: 0 $padding-base 0 0;
+  }
+
+  &__content {
+    width: 100%;
+    padding: 0;
+  }
+
+  &__buttons {
+    text-align: right;
+    padding: 0 $padding-base $padding-base;
+  }
+
+  svg {
+    height: 40px !important;
+    width: 40px !important;
+  }
+}

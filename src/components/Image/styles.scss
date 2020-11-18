@@ -1,0 +1,30 @@
+@import "src/styles/helpers/animations";
+
+.ve-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  outline: none;
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    border: 0 none;
+
+    &.preview {
+      filter: blur(2vw);
+      transform: scale(1.05);
+    }
+
+    &.reveal {
+      position: relative;
+      left: 0;
+      top: 0;
+      will-change: transform, opacity;
+      animation: progressiveReveal 1s ease-out;
+    }
+  }
+}

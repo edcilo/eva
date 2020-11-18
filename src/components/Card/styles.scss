@@ -1,0 +1,74 @@
+@import "src/styles/helpers/variables";
+.ve-card {
+  // overflow: hidden;
+
+  &__header, &__cover, &__content, &__footer {
+    &.ve-panel {
+      padding: $padding-base/ 2 $padding-base;
+      box-shadow: none;
+      &>.ve-panel {
+        padding: 0;
+        box-shadow: none;
+      }
+      &.ve-item {
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        .ve-item__body {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+
+    &.ve-panel:first-child:not(.ve-card__cover) {
+      padding-top: $padding-base;
+    }
+
+    &.ve-panel:last-child:not(.ve-card__cover) {
+      padding-bottom:  $padding-base;
+    }
+  }
+
+  &__cover.ve-panel, &__cover.ve-panel:first-child {
+    padding: 0;
+  }
+
+  &.disabled {
+    * {
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: #{$fs-lg}px;
+  }
+
+  h2 {
+    font-size: #{$fs-lg - 1}px;
+  }
+
+  h3 {
+    font-size: #{$fs-lg - 2}px;
+  }
+
+  h4 {
+    font-size: #{$fs-lg - 3}px;
+  }
+
+  h5 {
+    font-size: #{$fs-lg - 4}px;
+  }
+
+  h6 {
+    font-size: #{$fs-lg - 6}px;
+  }
+}

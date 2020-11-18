@@ -1,0 +1,57 @@
+.table {
+  width: 100%;
+
+  &.table-striped {
+      tr {
+          &:nth-of-type(even) {
+              background: $c-gray-lightest;
+          }
+      }
+  }
+
+  &.table-bordered {
+      td,
+      th {
+          border: 1px solid $c-gray-light;
+      }
+  }
+
+  &.table-hover {
+      tbody tr:hover {
+          background-color: $c-gray-lighter;
+      }
+  }
+
+  &.table-borderless {
+      td, th, tr {
+          border: none;
+      }
+  }
+
+  thead {
+      td, th {
+          background: $c-gray-light;
+
+          &:first-child {
+              border-radius: $br-rd-sm 0 0 0;
+          }
+
+          &:last-child {
+              border-radius: 0 $br-rd-sm 0 0;
+          }
+      }
+  }
+
+  th {
+      font-weight: $fw-medium;
+  }
+
+  th,
+  td {
+      padding: $padding-sm;
+  }
+
+  tr {
+      border-bottom: 1px solid $c-gray-light;
+  }
+}

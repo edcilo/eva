@@ -1,0 +1,24 @@
+@import "src/styles/helpers/variables";
+
+.ve-divider {
+  margin: $margin-base 0;
+  border-top: 1px solid $c-gray-light;
+  color: $text-muted;
+
+  &.dark {
+    border-color: $c-gray-darker;
+    color: $c-gray-darker;
+  }
+
+  &.clear {
+    border-color: $c-gray-lighter;
+    color: $text-light;
+  }
+
+  &__subheader {
+    margin: $margin-xs;
+    display: block;
+    font-size: $font-sm;
+    line-height: $line-height-tight;
+  }
+}

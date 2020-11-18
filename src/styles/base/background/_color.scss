@@ -1,0 +1,15 @@
+// BACKGROUND AND TEXT COLORS
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+@include bg-color($gray);
+@include bg-color($red);
+@include bg-color($orange);
+@include bg-color($yellow);
+@include bg-color($green);
+@include bg-color($teal);
+@include bg-color($blue);
+@include bg-color($indigo);
+@include bg-color($purple);
+@include bg-color($pink);

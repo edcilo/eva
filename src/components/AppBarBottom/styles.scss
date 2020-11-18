@@ -1,0 +1,52 @@
+@import "src/styles/helpers/variables";
+@import "src/styles/helpers/animations";
+
+.slide-enter-active {
+  animation: slideInUp 0.25s;
+}
+.slide-leave-active {
+  animation: slideOutDown 0.5s;
+}
+
+.ve-app-bar-bottom {
+  background-color: $c-gray-lighter;
+  color: $text-dark;
+  padding: 0 $padding-base;
+  margin: 0;
+  z-index: $z-header;
+
+  &.fixed {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__container-default {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+
+    .ve-button {
+      width: 100%;
+    }
+  }
+
+  &__container-sections {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .ve-button {
+    border-radius: 0;
+    margin: 0;
+    padding-top: $padding-sm * 1.5;
+    padding-bottom: $padding-sm * 1.5;
+    text-transform: uppercase;
+  }
+}
+
+.ve-app-bar-bottom-fixed {
+  padding-bottom: $padding-base * 3;
+}

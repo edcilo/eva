@@ -1,0 +1,28 @@
+@import "src/styles/helpers/variables";
+
+.ve-rating {
+  display: inline-flex;
+
+  &__point {
+    cursor: pointer;
+    margin-right: $margin-xs;
+    color: $c-gray-base;
+    transition: 200ms color linear;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .ve-rating__readonly & {
+      cursor: default;
+    }
+  }
+
+  &__active {
+    color: $c-yellow-base
+  }
+
+  &__hover {
+    color: $c-yellow-dark;
+  }
+}

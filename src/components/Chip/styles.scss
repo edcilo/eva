@@ -1,0 +1,114 @@
+@import "src/styles/helpers/variables";
+@import "src/styles/helpers/animations";
+
+.zoom-enter-active {
+  animation: zoomIn 0.25s;
+}
+
+.zoom-leave-active {
+  animation: zoomOut 0.25s;
+}
+
+$vSize: 36px;
+
+.ve-chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 $vSize/3;
+  border-radius: $vSize/2;
+  height: $vSize;
+  box-shadow: $panel-shadow;
+  background: $c-white;
+
+  &__hover,
+  &:hover {
+    background: $c-gray-lighter;
+    cursor: pointer;
+  }
+
+  &__focused,
+  &:focus,
+  &:focus {
+    background: $c-gray-light;
+    &:hover {
+      background: $c-gray-light;
+    }
+  }
+
+  [disabled],
+  &__disabled {
+    color: $c-gray-base;
+    background: $c-gray-lightest;
+  }
+
+  &__th {
+    padding-left: $vSize;
+  }
+
+  &__ds {
+    padding-right: $vSize;
+  }
+
+  &__check {
+    position: absolute;
+    top: 1.1px;
+    margin: 0 $vSize/6;
+    border-radius: 50%;
+    background: rgba($c-gray-darker, 0.8);
+    width: 24px;
+    height: 24px;
+    color: $c-white;
+  }
+
+  &__thumbnail {
+    position: absolute;
+    left: 0;
+    width: $vSize;
+    text-align: center;
+    line-height: 1;
+
+    .ve-avatar {
+      width: $vSize/1.5;
+      height: $vSize/1.5;
+      margin: 0 $vSize/6;
+    }
+
+    .ve-image {
+      width: $vSize/1.5 !important;
+      margin: 0 $vSize/6;
+      border-radius: 50%;
+    }
+
+    img {
+      width: $vSize/1.5 !important;
+      border-radius: 50%;
+    }
+
+    [class*="fa-"] {
+      width: auto;
+      height: $vSize/2.25;
+      margin: 0;
+    }
+  }
+
+  &__dismiss {
+    position: absolute;
+    right: 0;
+
+    .ve-button,
+    .ve-button.ve-btn-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin: 0;
+      padding: $vSize/4.5;
+      font-size: $vSize/2;
+
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+}
